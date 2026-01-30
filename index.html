@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Determinantes</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container-principal">
+        <div class="cartao-calculadora">
+
+            <header class="cabecalho-app">
+                <h1>Determinantes</h1>
+                <p>Cálculo de Determinantes: Laplace / Vandermonde</p>
+            </header>
+
+            <main>
+                <section class="grupo-controle">
+                    <label for="ordem-matriz">Ordem da Matriz Quadrada (n x n):</label>
+                    <div class="agrupamento-input">
+                        <input type="number" id="ordem-matriz" min="3" max="8" value="4">
+                    </div>
+                </section>
+
+                <section id="container-matriz" class="exibicao-matriz">
+                    <!-- <div class="texto-aviso">
+                        <p>Defina a ordem acima para gerar a matriz</p>
+                    </div> -->
+                    <div class="matriz" id="matriz">
+                    </div>
+
+                </section>
+
+                <section class="selecao-metodo">
+                    <h3>Selecione o Método:</h3>
+                    <div class="grupo-opcoes">
+                        <label class="cartao-opcao">
+                            <input type="radio" name="metodo" value="laplace" id="input-laplace" checked>
+                            <span class="texto-opcao">Laplace</span>
+                        </label>
+                        <label class="cartao-opcao">
+                            <input type="radio" name="metodo" value="vandermonde">
+                            <span class="texto-opcao">Vandermonde</span>
+                        </label>
+                    </div>
+                </section>
+
+                <button id="btn-calcular" class="botao-largo" onclick="calcularDeterminante()">Calcular Determinante</button>
+
+                <section id="area-resultado" class="caixa-resultado">
+                    <span class="label-resultado">Determinante:</span>
+                    <span id="valor-resultado" class="numero-resultado">0</span>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
